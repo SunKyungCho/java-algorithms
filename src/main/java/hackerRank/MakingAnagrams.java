@@ -1,19 +1,24 @@
 package hackerRank;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MakingAnagrams {
 
-    public static int solution(String s) {
 
-        int count = 0;
-        char before = ' ';
-        for (int i = 0; i < s.length(); i++) {
+    public static int solution(String first, String second) {
 
-            char spell = s.charAt(i);
-            if( spell == before) {
-                count++;
-            }
-            before = spell;
+        Map<Character, Integer> map = new HashMap<>();
+        for (char letter: first.toCharArray()) {
+            map.put(letter, map.getOrDefault(letter, 0) + 1);
         }
-        return count;
+        for (char letter: second.toCharArray()) {
+            map.put(letter, map.getOrDefault(letter, 0) - 1);
+        }
+
+        return map.values().stream()
+                .mapToInt(Math::abs)
+                .sum();
     }
+
 }
