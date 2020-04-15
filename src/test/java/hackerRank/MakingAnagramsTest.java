@@ -12,4 +12,5 @@ class MakingAnagramsTest {
     void solutionTest() {
         assertThat(solution("cde", "abc")).isEqualTo(4);
     }
+
 }
