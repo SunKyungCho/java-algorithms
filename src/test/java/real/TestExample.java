@@ -1,13 +1,9 @@
-import jdk.internal.jline.WindowsTerminal;
+package real;
+
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.registerCustomDateFormat;
-import static org.assertj.core.api.InstanceOfAssertFactories.ARRAY;
 
 public class TestExample {
 
@@ -18,32 +14,29 @@ public class TestExample {
         int u = 3;
         int l = 2;
         int checkCount = 0;
-        int[] columns = {1, 1, 1, 1,1};
+        int[] columns = {1, 1, 1, 1, 1};
         int[] upper = new int[columns.length];
         int[] lower = new int[columns.length];
         int upperFillCount = 0;
 
         for (int i = 0; i < columns.length; i++) {
-            if( columns[i] == 1) {
-                if( u != upperFillCount) {
+            if (columns[i] == 1) {
+                if (u != upperFillCount) {
                     upper[i] = 1;
                     lower[i] = 0;
                     upperFillCount++;
                     checkCount++;
-                }
-                else {
+                } else {
                     lower[i] = 1;
                     upper[i] = 0;
                     checkCount++;
                 }
-            }
-            else if (columns[i] == 2) {
+            } else if (columns[i] == 2) {
                 upper[i] = 1;
                 lower[i] = 1;
                 upperFillCount++;
-                checkCount+=2;
-            }
-            else {
+                checkCount += 2;
+            } else {
                 upper[i] = 0;
                 lower[i] = 0;
             }
@@ -74,16 +67,13 @@ public class TestExample {
 
         String[] files = s.split("\n");
         for (String file : files) {
-            if(isMusic(file)) {
+            if (isMusic(file)) {
                 musicFileSize += getByteByFile(file.split(" ")[1]);
-            }
-            else if (isImage(file)) {
+            } else if (isImage(file)) {
                 imageFileSize += getByteByFile(file.split(" ")[1]);
-            }
-            else if (isMovie(file)) {
+            } else if (isMovie(file)) {
                 movieFileSize += getByteByFile(file.split(" ")[1]);
-            }
-            else {  //others
+            } else {  //others
                 otherFileSize += getByteByFile(file.split(" ")[1]);
             }
         }
@@ -120,7 +110,7 @@ public class TestExample {
     @Test
     void test3() {
 
-        int[] numbers = {1, 1,2,-1,2,-1};
+        int[] numbers = {1, 1, 2, -1, 2, -1};
         //가장 큰 정수를 리턴해야 한다.
 //
 //        int[] check = new int[100000];
@@ -137,8 +127,8 @@ public class TestExample {
 
         Map<Integer, Integer> map = new HashMap<>();
         for (int number : numbers) {
-            if( map.containsKey(Math.abs(number))) {
-                if(isBothValues(map.get(Math.abs(number)), number)) {
+            if (map.containsKey(Math.abs(number))) {
+                if (isBothValues(map.get(Math.abs(number)), number)) {
                     biggestNumber = Math.max(biggestNumber, Math.abs(number));
                 }
             }
