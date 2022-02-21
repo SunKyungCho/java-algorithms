@@ -1,11 +1,11 @@
-package leetcode.dp;
+package leetcode;
 
 
 /*
 *  https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 *
 * */
-public class BestTimeToBuyAndSellStock_121 {
+public class BestTimeToBuyAndSellStock121 {
     public static int maxProfit(int[] prices) {
         int max = 0;
         for (int i = 0; i < prices.length; i++) {
