@@ -19,6 +19,7 @@
 * [116. Populating Next Right Pointers in Each Node](src/main/java/leetcode/PopulatingNextRightPointersInEachNode.java)
 * [46. Permutations](src/main/java/leetcode/Permutations.java)
 * [77. Combinations](src/main/java/leetcode/Combinations.java)
+* [784. Letter Case Permutation](src/main/java/leetcode/LetterCasePermutation.java)
 
 ## Codility
 * [Lesson4. MaxCounters](src/main/java/codility/MaxCounters.java)
