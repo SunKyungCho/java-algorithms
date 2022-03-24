@@ -2,15 +2,14 @@ package leetcode;
 
 
 /*
+  당신은 제품 관리자이며 현재 새 제품을 개발하는 팀을 이끌고 있습니다.
+   안타깝게도 최신 버전의 제품은 품질 검사에 실패했습니다.
+   각 버전은 이전 버전을 기반으로 개발되기 때문에 나쁜 버전 이후의 모든 버전도 나쁜 것입니다.
+   n개의 버전 [1, 2, ..., n]이 있고 첫 번째 잘못된 버전을 찾고자 한다고 가정합니다.
 
-  You are a product manager and currently leading a team to develop a new product.
-  Unfortunately, the latest version of your product fails the quality check.
-  Since each version is developed based on the previous version, all the versions after a bad version are also bad.
-  Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
-
-  You are given an API bool isBadVersion(version) which returns whether version is bad.
-  Implement a function to find the first bad version.
-  You should minimize the number of calls to the API.
+버전이 나쁜지 여부를 반환하는 API bool isBadVersion(version)이 제공됩니다.
+첫 번째 잘못된 버전을 찾는 기능을 구현합니다.
+API에 대한 호출 수를 최소화해야 합니다.
 
 * */
 

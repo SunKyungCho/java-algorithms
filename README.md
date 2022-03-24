@@ -20,6 +20,8 @@
 * [46. Permutations](src/main/java/leetcode/Permutations.java)
 * [77. Combinations](src/main/java/leetcode/Combinations.java)
 * [784. Letter Case Permutation](src/main/java/leetcode/LetterCasePermutation.java)
+* [215. Kth Largest Element in an Array](src/main/java/leetcode/KthLargestElementInAnArray.java)
+* [70. Climbing Stairs](src/main/java/leetcode/ClimbinStairs.java)
 
 ## Codility
 * [Lesson4. MaxCounters](src/main/java/codility/MaxCounters.java)
